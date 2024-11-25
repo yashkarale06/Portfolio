@@ -1,0 +1,8 @@
+{
+  "name": "Speech Emotion Recognizer",
+  "url": "https://github.com/yashkarale06/Speech_Emotion_Recognizer",
+  "description": "A tool that analyzes speech to detect and classify emotions in real-time or recorded audio.",
+  "thumbnail": "/projects/Emotion Recognition.png",
+  "status": "WIP",
+  "opensource": true
+}

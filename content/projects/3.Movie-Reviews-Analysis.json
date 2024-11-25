@@ -1,0 +1,8 @@
+{
+  "name": "Movie Reviews Analysis",
+  "url": "https://github.com/yashkarale06/Movies-Reviews-Analysis.ipynb",
+  "description": "A tool that analyzes movie reviews to determine sentiment and extract insights from user opinions and ratings.",
+  "thumbnail": "/projects/data-analysis.png",
+  "status": "Active",
+  "opensource": true
+}

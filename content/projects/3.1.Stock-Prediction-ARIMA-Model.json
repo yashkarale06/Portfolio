@@ -1,0 +1,8 @@
+{
+  "name": "Stock Prediction ARIMA Model",
+  "url": "https://github.com/yashkarale06/Stock-Prediction-ARIMA-Model",
+  "description": "A statistical model that uses historical stock data to forecast future stock prices based on trends and patterns.",
+  "thumbnail": "/projects/stock-market.png",
+  "status": "Active",
+  "opensource": true
+}

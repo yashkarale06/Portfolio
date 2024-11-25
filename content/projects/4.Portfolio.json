@@ -1,0 +1,8 @@
+{
+  "name": "Portfolio",
+  "url": "http://yashkarale.pythonanywhere.com/",
+  "description": "A portfolio created by me using HTML, CSS, JavaScript, and Django to showcase my skills, projects, and achievements.",
+  "thumbnail": "/projects/professional-portfolio.png",
+  "status": "Active",
+  "opensource": true
+}
