@@ -2,8 +2,10 @@
   <main class="min-h-screen">
     <div class="space-y-24">
       <HomeIntro />
-      <HomeSocialLinks />
+      <HomeExperienceSection/>
       <HomeFeaturedProjects />
+      <HomeSkillsSection />
+      <HomeSocialLinks />
       <!-- <HomeFeaturedArticles /> -->
       <HomeNewsletter />
     </div>
