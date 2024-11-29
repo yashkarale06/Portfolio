@@ -27,26 +27,7 @@
             class="relative hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-300"
             :class="{ 'active-tab': tab === 'code' }"
           />
-          <UButton
-            v-if="showUsageTab"
-            @click="tab = 'usage'"
-            label="Usage"
-            variant="soft"
-            color="white"
-            size="xs"
-            class="relative hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-300"
-            :class="{ 'active-tab': tab === 'usage' }"
-          />
-          <UButton
-            v-if="showCreditTab"
-            @click="tab = 'credit'"
-            label="Credits"
-            variant="soft"
-            color="white"
-            size="xs"
-            class="relative hover:bg-gray-100 hover:text-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-300"
-            :class="{ 'active-tab': tab === 'credit' }"
-          />
+          
         </div>
       </div>
       <div>
@@ -57,8 +38,6 @@
           <slot name="preview" />
         </div>
         <slot v-if="tab === 'code'" name="codebase" />
-        <slot v-if="tab === 'usage'" name="usage" />
-        <slot v-if="tab === 'credit'" name="credit" />
       </div>
     </div>
   </div>
@@ -71,10 +50,6 @@ defineProps({
   showUsageTab: {
     type: Boolean,
     default: true,
-  },
-  showCreditTab: {
-    type: Boolean,
-    default: false,
   },
 });
 

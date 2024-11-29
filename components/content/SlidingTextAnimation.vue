@@ -1,0 +1,20 @@
+<template>
+  <div class="overflow-hidden w-180 h-32 bg-gradient-to-r from-blue-500 to-teal-500 p-8 rounded-lg shadow-lg">
+    <div class="text-2xl font-bold animate-slide-left text-white">We build amazing Webpages</div>
+  </div>
+</template>
+
+<style scoped>
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 3s ease-out 5s infinite;
+}
+</style>
