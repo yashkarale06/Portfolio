@@ -27,10 +27,10 @@
 <script setup>
 const experience = [
   {
-    name: "Startup Website",
+    name: "Dynamic Website Development",
     skills: "JavaScript, Vue.js, Contentful",
     description:
-      "I developed a website for a client's startup using JavaScript and Vue.js. The website was fully integrated with Contentful, providing dynamic content management for the client. This project allowed me to strengthen my skills in front-end development and CMS integration.",
-  },
+      "I designed a dynamic website using JavaScript and Vue.js, seamlessly integrated with Contentful for efficient content management. This project involved creating an interactive and responsive interface while enabling the client to manage content dynamically. It enhanced my expertise in front-end development and CMS integration."
+   },
 ];
 </script>
