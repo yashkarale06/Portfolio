@@ -32,11 +32,5 @@ const experience = [
     description:
       "I developed a website for a client's startup using JavaScript and Vue.js. The website was fully integrated with Contentful, providing dynamic content management for the client. This project allowed me to strengthen my skills in front-end development and CMS integration.",
   },
-  {
-    name: "Blood Donation Project",
-    skills: "Vue.js, JavaScript, Node.js, Docker (MongoDB)",
-    description:
-      "I worked on a Blood Donation Project for a client, where I used Vue.js, JavaScript, and Node.js. The project involved displaying blood need data around users' locations and providing statistics about blood donors and blood types. I also integrated MongoDB with Docker for seamless data storage and management.",
-  },
 ];
 </script>
