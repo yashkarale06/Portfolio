@@ -44,8 +44,8 @@ jobs:
 
       - name: Build Website
         run: |
-          bun install \
-          && bun run generate 
+          npm install \
+          && npm run generate 
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
