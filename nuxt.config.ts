@@ -35,24 +35,6 @@ export default defineNuxtConfig({
     },
   },
 
-  // Configure nitro for better build performance
-  nitro: {
-    // Disable prerendering if it continues to cause issues
-    prerender: {
-      // Set to false to disable prerendering completely
-      // Or configure specific routes to include/exclude
-      ignore: [
-        // Add routes that cause issues during prerendering
-        // Example: '/problematic-route'
-      ]
-    },
-    // Error handling during prerendering
-    routeRules: {
-      // Define fallbacks for routes
-      '/**': { prerender: true }
-    }
-  },
-
   // Other existing configurations...
   app: {
     // Add a default layout if needed
