@@ -1,46 +1,64 @@
+// nuxt.config.js
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-
+  // Existing modules and configuration
   modules: [
-    "@nuxt/ui",
-    "nuxt-icon",
-    "@nuxtjs/google-fonts",
-    "@nuxtjs/fontaine",
-    "@nuxt/image",
-    "@nuxt/content",
-    "@nuxthq/studio",
-    "@vueuse/nuxt"
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxt/ui',
+    'nuxt-icon',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/fontaine',
   ],
 
-  ui: {
-    icons: ["heroicons", "lucide"],
-  },
-
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-    head: {
-      htmlAttrs: {
-        lang: "en",
-        class: "h-full",
-      },
-      bodyAttrs: {
-        class: "antialiased bg-gray-50 dark:bg-black min-h-screen",
-      },
-    },
-  },
-
+  // Updated content module configuration
   content: {
-    highlight: {
-      theme: "github-dark",
+    // Configure content directory
+    dir: 'content',
+    // Document-driven mode for better prerendering
+    documentDriven: {
+      // Enable navigation generation based on your content
+      navigation: true,
+      // Ensure this is false in production for better performance
+      injectPage: false
+    },
+    // Handle markdown correctly
+    markdown: {
+      toc: {
+        depth: 3,
+        searchDepth: 3
+      },
+    },
+    // Experimental features can be disabled if causing issues
+    experimental: {
+      clientDB: false,
+      stripQueryParameters: false
     },
   },
 
-  googleFonts: {
-    display: "swap",
-    families: {
-      Inter: [400, 500, 600, 700, 800, 900],
+  // Configure nitro for better build performance
+  nitro: {
+    // Disable prerendering if it continues to cause issues
+    prerender: {
+      // Set to false to disable prerendering completely
+      // Or configure specific routes to include/exclude
+      ignore: [
+        // Add routes that cause issues during prerendering
+        // Example: '/problematic-route'
+      ]
     },
+    // Error handling during prerendering
+    routeRules: {
+      // Define fallbacks for routes
+      '/**': { prerender: true }
+    }
   },
 
-  compatibilityDate: "2024-11-25",
-});
+  // Other existing configurations...
+  app: {
+    // Add a default layout if needed
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+
+  // Development-specific configurations
+  devtools: { enabled: process.env.NODE_ENV === 'development' }
+})

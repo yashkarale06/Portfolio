@@ -1,25 +1,37 @@
 <template>
   <main class="min-h-screen">
-    <AppHeader class="mb-12" title="Projects" :description="description" />
-    <div class="space-y-4">
-      <AppProjectCard
-        v-for="(project, id) in projects"
+    <AppHeader class="mb-12" title="Certifications" :description="description" />
+    <div v-if="certifications && certifications.length" class="space-y-4">
+      <AppCertificationCard
+        v-for="(certification, id) in certifications"
         :key="id"
-        :project="project"
+        :certification="certification"
       />
+    </div>
+    <div v-else class="py-8 text-center">
+      <p class="text-gray-600 dark:text-gray-400">
+        Certifications will be displayed here soon.
+      </p>
     </div>
   </main>
 </template>
 
 <script setup>
 const description =
-  "I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.";
+  "Here are some of the certifications I have earned over the years, showcasing my expertise and dedication in various fields. Feel free to explore and learn more about my achievements.";
+
 useSeoMeta({
-  title: "Projects | Yash Karale",
+  title: "Certifications | Yash Karale",
   description,
 });
 
-const { data: projects } = await useAsyncData("projects-all", () =>
-  queryContent("/projects").find()
-);
+// Add proper error handling to the content query
+const { data: certifications } = await useAsyncData("certifications-all", async () => {
+  try {
+    return await queryContent("/certification").find();
+  } catch (error) {
+    console.error("Error fetching certifications:", error);
+    return []; // Return empty array as fallback
+  }
+});
 </script>
